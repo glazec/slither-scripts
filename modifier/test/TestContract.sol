@@ -1,14 +1,7 @@
 pragma solidity ^0.4.25;
+import './ParentContract.sol';
 
-contract ParentContract {
-    modifier parentModifier() {
-        _;
-    }
 
-    function withOneModifier() internal parentModifier { }
-
-    function parentWithNoModifier() public {}
-}
 
 contract TestContract is ParentContract {
     modifier firstModifier() {
